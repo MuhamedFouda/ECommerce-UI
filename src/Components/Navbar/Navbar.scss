@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+nav {
+    height: 60px;
+
+    .wrapper {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .search {
+                border: .5px solid lightgray;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+
+                input {
+                    border: none;
+                    text-align: center;
+                    @media only screen and (max-width: 600px) {
+                        display: none;
+                      }
+                }
+            }
+        }
+
+        .center {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                font-family: "Orbitron", sans-serif;
+                width: 100%; height: 40px;
+                cursor: pointer;
+            }
+            svg text {
+                animation: stroke 7s infinite alternate;
+                stroke-width: 5;
+                stroke: #008080;
+                font-size: 30px;
+                -webkit-animation: stroke 7s infinite alternate;
+}
+            @keyframes stroke {
+                0%   {
+                    fill: rgba(0,128,128,0); stroke: rgba(0,128,128,1);
+                    stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+                }
+                70%  {fill: rgba(0,128,128,0); stroke: rgba(0,128,128,1); }
+                80%  {fill: rgba(0,128,128,0); stroke: rgba(0,128,128,1); stroke-width: 3; }
+                100% {
+                    fill: rgba(0,128,128,1); stroke: rgba(0,128,128,0);
+                    stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+                }
+            }
+            
+            .wrapperr {background-color: transparent};
+
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .menuItem {
+                font-size: 14px;
+                cursor: pointer;
+                margin-left: 25px;
+            }
+        }
+    }
+}

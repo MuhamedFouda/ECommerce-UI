@@ -1,0 +1,10 @@
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+}
